@@ -13,7 +13,7 @@ const AppDetails = () => {
 
   return (
     <div className="bg-gray-100 py-[80px]">
-      <div className="max-w-[1440px] mx-auto lg:flex gap-10">
+      <div className="max-w-[1440px] mx-auto lg:flex gap-10 border-b border-gray-300 pb-8">
         <div>
           <img
             className="w-[350px] h-[350px] mx-auto"
@@ -68,8 +68,16 @@ const AppDetails = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="max-w-[1440px] mx-auto border-b border-gray-300">
         <Stats appsDetails={appsDetails} />
+      </div>
+      <div className="max-w-[1440px] mx-auto  py-8 px-4 lg:px-0">
+        <h3 className="text-[24px] font-bold mb-5 text-center lg:text-left">
+          Description
+        </h3>
+        <p className="text-center lg:text-left text-gray-400">
+          {appsDetails.description}
+        </p>
       </div>
     </div>
   );
