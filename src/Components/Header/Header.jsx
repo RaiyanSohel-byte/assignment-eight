@@ -32,10 +32,10 @@ const Header = () => {
                 <NavLink>Home</NavLink>
               </li>
               <li>
-                <NavLink>Apps</NavLink>
+                <NavLink to="/apps">Apps</NavLink>
               </li>
               <li>
-                <NavLink>Installation</NavLink>
+                <NavLink to="/installation">Installation</NavLink>
               </li>
             </ul>
           </div>
@@ -52,10 +52,10 @@ const Header = () => {
               <NavLink>Home</NavLink>
             </li>
             <li>
-              <NavLink>Apps</NavLink>
+              <NavLink to="/apps">Apps</NavLink>
             </li>
             <li>
-              <NavLink>Installation</NavLink>
+              <NavLink to="/installation">Installation</NavLink>
             </li>
           </ul>
         </div>
