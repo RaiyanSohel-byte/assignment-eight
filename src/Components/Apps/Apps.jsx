@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AppsContext } from "../../Root";
 import App2 from "./App2";
+import { NavLink } from "react-router";
 
 const Apps = () => {
   const apps = useContext(AppsContext);
@@ -58,9 +59,23 @@ const Apps = () => {
         </label>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-4 max-w-[1440px] mt-5 mx-auto gap-4 ">
-        {filteredApps.map((app) => (
-          <App2 app={app} key={app.id} />
-        ))}
+        {filteredApps.length > 0 ? (
+          filteredApps.map((app) => <App2 app={app} key={app.id} />)
+        ) : (
+          <div className="lg:w-[1440px] mx-auto min-h-[200px] flex flex-col items-center">
+            <h3 className="text-center text-6xl font-bold my-6">
+              No Apps Found
+            </h3>
+            <div className="flex justify-center">
+              <button
+                onClick={() => setSearch("")}
+                className="btn bg-[#332a51] text-white"
+              >
+                Show All Apps
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ const Card = ({ app }) => {
   return (
     <NavLink
       to={`/${app.id}`}
-      className="card hover:shadow-xl cursor-pointer transition-all duration-300 bg-base-100 w-[348px] h-[435px] mx-auto shadow-sm p-4"
+      className="card cursor-pointer hover:shadow-xl transition-all duration-300 bg-base-100 w-[348px] h-[435px] mx-auto shadow-sm p-4"
     >
       <div>
         <img
