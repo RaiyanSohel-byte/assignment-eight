@@ -1,15 +1,22 @@
 import React, { useContext, useState } from "react";
 import { AppsContext } from "../../Root";
 import App2 from "./App2";
-import { NavLink } from "react-router";
 import appErrorImg from "../../assets/app-error.png";
+import logo from "../../assets/logo.png";
 const Apps = () => {
   const apps = useContext(AppsContext);
   const [search, setSearch] = useState("");
-
+  const [isSearching, setIsSearching] = useState(false);
   const filteredApps = apps.filter((app) =>
     app.title.toLowerCase().includes(search.toLowerCase())
   );
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+    setIsSearching(true);
+    setTimeout(() => {
+      setIsSearching(false);
+    }, 500);
+  };
   return (
     <>
       {filteredApps.length > 0 ? (
@@ -31,7 +38,7 @@ const Apps = () => {
                   type="text"
                   id="Search"
                   value={search}
-                  onChange={(e) => setSearch(e.target.value)}
+                  onChange={(e) => handleSearch(e)}
                   className="mt-0.5 w-full px-5 py-2 shadow-sm sm:text-sm"
                   placeholder="Search App"
                 />
@@ -61,10 +68,21 @@ const Apps = () => {
               </div>
             </label>
           </div>
+          {isSearching && (
+            <div className="flex justify-center gap-3 items-center my-20">
+              <h3 className="text-5xl font-bold  text-gray-400 text-center">
+                LOADING
+              </h3>
+              <img
+                className="w-[40px] h-[40px] animate-spin"
+                src={logo}
+                alt=""
+              />{" "}
+            </div>
+          )}
           <div className="grid grid-cols-1 lg:grid-cols-4 max-w-[1440px] mt-5 mx-auto gap-4 ">
-            {filteredApps.map((app) => (
-              <App2 app={app} key={app.id} />
-            ))}
+            {!isSearching &&
+              filteredApps.map((app) => <App2 app={app} key={app.id} />)}
           </div>
         </div>
       ) : (
