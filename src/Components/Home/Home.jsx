@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router";
 import playstore from "../../assets/playstore.png";
 import appstore from "../../assets/appstore.png";
 import hero from "../../assets/hero.png";
+import { AppsContext } from "../../Root";
+import Card from "./Card";
 const Home = () => {
+  const apps = useContext(AppsContext);
   return (
     <div className="bg-[#f5f5f5]">
       <div className="max-w-[1440px] mx-auto pt-[40px] lg:pt-[80px] ">
@@ -70,6 +73,19 @@ const Home = () => {
               <p className="text-[1rem]">31 more will Launch</p>
             </div>
           </div>
+        </div>
+      </div>
+      <div>
+        <div className="text-center max-w-[1440px] mx-auto py-[64px] lg:py-[80px]">
+          <h3 className="text-[48px] font-bold">Trending Apps</h3>
+          <p className="lg:text-[20px] text-sm text-gray-500">
+            Explore All Trending Apps on the Market developed by us
+          </p>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-4 max-w-[1440px] mx-auto gap-4 pb-80">
+          {apps.map((app) => (
+            <Card app={app} key={app.id} />
+          ))}
         </div>
       </div>
     </div>

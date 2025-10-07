@@ -12,6 +12,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
+    loader: () => fetch("/data2.json"),
     children: [
       {
         index: true,

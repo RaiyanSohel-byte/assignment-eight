@@ -1,13 +1,16 @@
-import React from "react";
+import React, { createContext } from "react";
 import Header from "./Components/Header/Header";
-import { Outlet } from "react-router";
+import { Outlet, useLoaderData } from "react-router";
 import Footer from "./Footer/Footer";
-
+export const AppsContext = createContext([]);
 const Root = () => {
+  const apps = useLoaderData();
   return (
     <div>
       <Header />
-      <Outlet />
+      <AppsContext value={apps}>
+        <Outlet />
+      </AppsContext>
       <Footer />
     </div>
   );
