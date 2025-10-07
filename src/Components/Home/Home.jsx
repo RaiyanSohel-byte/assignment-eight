@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
-import { NavLink } from "react-router";
+import React from "react";
+import { NavLink, useLoaderData } from "react-router";
 import playstore from "../../assets/playstore.png";
 import appstore from "../../assets/appstore.png";
 import hero from "../../assets/hero.png";
-import { AppsContext } from "../../Root";
+
 import Card from "./Card";
 const Home = () => {
-  const apps = useContext(AppsContext);
+  const apps = useLoaderData();
   return (
     <div className="bg-[#f5f5f5]">
       <div className="max-w-[1440px] mx-auto pt-[40px] lg:pt-[80px] ">
@@ -82,10 +82,18 @@ const Home = () => {
             Explore All Trending Apps on the Market developed by us
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-4 max-w-[1440px] mx-auto gap-4 pb-80">
+        <div className="grid grid-cols-1 lg:grid-cols-4 max-w-[1440px] mx-auto gap-4 ">
           {apps.map((app) => (
             <Card app={app} key={app.id} />
           ))}
+        </div>
+        <div className="flex justify-center pb-80 mt-10">
+          <NavLink
+            to="apps"
+            className="btn btn-lg text-white [background:linear-gradient(125.07deg,#632EE3,#9F62F2_100%)]"
+          >
+            Show All
+          </NavLink>
         </div>
       </div>
     </div>
