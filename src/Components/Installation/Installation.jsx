@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { InstallContext } from "../../Root";
+import React from "react";
+
 import { FaCaretDown } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 import { GoStarFill } from "react-icons/go";

@@ -5,10 +5,10 @@ import Footer from "./Footer/Footer";
 import { addToLocalStorage } from "./Utility/addToLocalStorage";
 export const AppsContext = createContext([]);
 export const HandleInstallContext = createContext(() => {});
-export const InstallContext = createContext([]);
+
 const Root = () => {
   const apps = useLoaderData();
-  const [install, setInstall] = useState([]);
+  // const [install, setInstall] = useState([]);
 
   const handleInstall = (data) => {
     addToLocalStorage(data);
@@ -17,13 +17,11 @@ const Root = () => {
     <div>
       <Header />
 
-      <InstallContext value={install}>
-        <HandleInstallContext value={handleInstall}>
-          <AppsContext value={apps}>
-            <Outlet />
-          </AppsContext>
-        </HandleInstallContext>
-      </InstallContext>
+      <HandleInstallContext value={handleInstall}>
+        <AppsContext value={apps}>
+          <Outlet />
+        </AppsContext>
+      </HandleInstallContext>
 
       <Footer />
     </div>
