@@ -1,0 +1,146 @@
+[
+  {
+    "image": "https://example.com/images/app1.png",
+    "title": "SnapPix",
+    "companyName": "PixelSoft Studios",
+    "id": 1,
+    "description": "A fast and fun photo editor with AI-powered filters and effects.",
+    "size": 45.8,
+    "reviews": 12458,
+    "ratingAvg": 4.5,
+    "downloads": 2500000,
+    "ratings": [
+      { "name": "1 star", "count": 350 },
+      { "name": "2 star", "count": 420 },
+      { "name": "3 star", "count": 890 },
+      { "name": "4 star", "count": 2650 },
+      { "name": "5 star", "count": 8148 }
+    ]
+  },
+  {
+    "image": "https://example.com/images/app2.png",
+    "title": "FitTrack Pro",
+    "companyName": "Wellness Works Inc.",
+    "id": 2,
+    "description": "Track your workouts, nutrition, and sleep with detailed insights.",
+    "size": 72.3,
+    "reviews": 8021,
+    "ratingAvg": 4.2,
+    "downloads": 1800000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1100 },
+      { "name": "4 star", "count": 3200 },
+      { "name": "5 star", "count": 2921 }
+    ]
+  },
+  {
+    "image": "https://example.com/images/app3.png",
+    "title": "NoteNest",
+    "companyName": "Cloudy Labs",
+    "id": 3,
+    "description": "Organize your notes, ideas, and to-do lists seamlessly across devices.",
+    "size": 38.6,
+    "reviews": 6570,
+    "ratingAvg": 4.7,
+    "downloads": 2100000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 180 },
+      { "name": "3 star", "count": 620 },
+      { "name": "4 star", "count": 1900 },
+      { "name": "5 star", "count": 3770 }
+    ]
+  },
+  {
+    "image": "https://example.com/images/app4.png",
+    "title": "TuneBox",
+    "companyName": "Harmony Labs",
+    "id": 4,
+    "description": "Stream millions of songs, podcasts, and playlists ad-free.",
+    "size": 95.4,
+    "reviews": 21890,
+    "ratingAvg": 4.6,
+    "downloads": 8000000,
+    "ratings": [
+      { "name": "1 star", "count": 900 },
+      { "name": "2 star", "count": 1300 },
+      { "name": "3 star", "count": 2500 },
+      { "name": "4 star", "count": 5200 },
+      { "name": "5 star", "count": 11000 }
+    ]
+  },
+  {
+    "image": "https://example.com/images/app5.png",
+    "title": "CityRider",
+    "companyName": "UrbanTech Mobility",
+    "id": 5,
+    "description": "Book bikes, scooters, or cabs instantly in your city.",
+    "size": 64.2,
+    "reviews": 9350,
+    "ratingAvg": 3.9,
+    "downloads": 3400000,
+    "ratings": [
+      { "name": "1 star", "count": 1300 },
+      { "name": "2 star", "count": 1500 },
+      { "name": "3 star", "count": 2100 },
+      { "name": "4 star", "count": 2500 },
+      { "name": "5 star", "count": 1950 }
+    ]
+  },
+  {
+    "image": "https://example.com/images/app6.png",
+    "title": "Langly",
+    "companyName": "EduNova Ltd.",
+    "id": 6,
+    "description": "Learn new languages with interactive lessons and speech recognition.",
+    "size": 89.5,
+    "reviews": 17400,
+    "ratingAvg": 4.8,
+    "downloads": 5000000,
+    "ratings": [
+      { "name": "1 star", "count": 250 },
+      { "name": "2 star", "count": 320 },
+      { "name": "3 star", "count": 700 },
+      { "name": "4 star", "count": 4000 },
+      { "name": "5 star", "count": 12130 }
+    ]
+  },
+  {
+    "image": "https://example.com/images/app7.png",
+    "title": "BudgetBuddy",
+    "companyName": "Finwise Apps",
+    "id": 7,
+    "description": "Manage your expenses and track your savings effortlessly.",
+    "size": 52.7,
+    "reviews": 8120,
+    "ratingAvg": 4.3,
+    "downloads": 2300000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 1000 },
+      { "name": "4 star", "count": 2500 },
+      { "name": "5 star", "count": 3620 }
+    ]
+  },
+  {
+    "image": "https://example.com/images/app8.png",
+    "title": "QuickDocs",
+    "companyName": "OfficeWare Systems",
+    "id": 8,
+    "description": "Create, edit, and collaborate on documents in real time.",
+    "size": 80.4,
+    "reviews": 13200,
+    "ratingAvg": 4.4,
+    "downloads": 6100000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 1900 },
+      { "name": "4 star", "count": 4200 },
+      { "name": "5 star", "count": 5800 }
+    ]
+  }
+]
