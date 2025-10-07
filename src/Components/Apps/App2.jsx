@@ -1,10 +1,14 @@
 import { ArrowDownToLine } from "lucide-react";
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import { NavLink } from "react-router";
 
 const App2 = ({ app }) => {
   return (
-    <div className="card hover:shadow-xl cursor-pointer transition-all duration-300 bg-base-100 w-[348px] h-[435px] mx-auto shadow-sm p-4">
+    <NavLink
+      to={`/${app.id}`}
+      className="card hover:shadow-xl cursor-pointer transition-all duration-300 bg-base-100 w-[348px] h-[435px] mx-auto shadow-sm p-4"
+    >
       <div>
         <img
           className="w-[316px] h-[316px] mx-auto rounded-[8px]"
@@ -25,7 +29,7 @@ const App2 = ({ app }) => {
           </div>
         </div>
       </div>
-    </div>
+    </NavLink>
   );
 };
 

@@ -7,6 +7,7 @@ import Root from "./Root.jsx";
 import Home from "./Components/Home/Home.jsx";
 import Apps from "./Components/Apps/Apps.jsx";
 import Installation from "./Components/Installation/Installation.jsx";
+import AppDetails from "./Components/AppDetails/AppDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "installation",
         Component: Installation,
+      },
+      {
+        path: ":id",
+        Component: AppDetails,
       },
     ],
   },
