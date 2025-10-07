@@ -29,13 +29,46 @@ const Header = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <NavLink>Home</NavLink>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    `${
+                      isActive
+                        ? "bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent border-b border-[#632EE3]"
+                        : ""
+                    }`
+                  }
+                >
+                  Home
+                </NavLink>
               </li>
               <li>
-                <NavLink to="/apps">Apps</NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    `${
+                      isActive
+                        ? "bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent border-b border-[#632EE3]"
+                        : ""
+                    }`
+                  }
+                  to="/apps"
+                >
+                  Apps
+                </NavLink>
               </li>
               <li>
-                <NavLink to="/installation">Installation</NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    `${
+                      isActive
+                        ? "bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent border-b border-[#632EE3]"
+                        : ""
+                    }`
+                  }
+                  to="/installation"
+                >
+                  Installation
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -49,13 +82,46 @@ const Header = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <NavLink>Home</NavLink>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `${
+                    isActive
+                      ? "bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent border-b border-[#632EE3] rounded-none"
+                      : ""
+                  }`
+                }
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/apps">Apps</NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  `${
+                    isActive
+                      ? "bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent border-b border-[#632EE3] rounded-none"
+                      : ""
+                  }`
+                }
+                to="/apps"
+              >
+                Apps
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/installation">Installation</NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  `${
+                    isActive
+                      ? "bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent border-b border-[#632EE3] rounded-none"
+                      : ""
+                  }`
+                }
+                to="/installation"
+              >
+                Installation
+              </NavLink>
             </li>
           </ul>
         </div>
