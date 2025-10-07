@@ -1,9 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { AppsContext } from "../../Root";
 import App2 from "./App2";
 
 const Apps = () => {
   const apps = useContext(AppsContext);
+  const [search, setSearch] = useState("");
+
+  const filteredApps = apps.filter((app) =>
+    app.title.toLowerCase().includes(search.toLowerCase())
+  );
   return (
     <div className="bg-gray-100 pb-20">
       <div className="text-center max-w-[1440px] mx-auto py-[64px] lg:py-[80px]">
@@ -14,13 +19,15 @@ const Apps = () => {
       </div>
       <div className="max-w-[1440px] mx-auto lg:flex justify-between">
         <h3 className="text-[24px] font-semibold mb-3 text-center lg:text-left">
-          ({apps.length}) Apps Found
+          ({filteredApps.length}) Apps Found
         </h3>
         <label htmlFor="Search">
           <div className="relative border border-gray-300 rounded-lg lg:w-[400px] w-[300px] mx-auto">
             <input
               type="text"
               id="Search"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
               className="mt-0.5 w-full px-5 py-2 shadow-sm sm:text-sm"
               placeholder="Search App"
             />
@@ -51,7 +58,7 @@ const Apps = () => {
         </label>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-4 max-w-[1440px] mt-5 mx-auto gap-4 ">
-        {apps.map((app) => (
+        {filteredApps.map((app) => (
           <App2 app={app} key={app.id} />
         ))}
       </div>
