@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 
 import { FaCaretDown } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 import { GoStarFill } from "react-icons/go";
 import { getStoredApp } from "../../Utility/addToLocalStorage";
+import { HandleUninstallContext } from "../../Root";
 
 const Installation = () => {
-  const installs = getStoredApp();
-  console.log(installs);
+  const [installs, setInstalls] = useState(getStoredApp());
+  const handleUninstall = useContext(HandleUninstallContext);
+
+  const handleClickUninstall = (app) => {
+    handleUninstall(app);
+    setInstalls((prev) => prev.filter((inst) => inst.id !== app.id));
+  };
   return (
     <div className="bg-gray-100 pb-20">
       <div className="text-center max-w-[1440px] mx-auto py-[64px] lg:py-[80px]">
@@ -71,7 +77,10 @@ const Installation = () => {
                 </div>
               </div>
               <div>
-                <button className="btn btn-success text-white">
+                <button
+                  onClick={() => handleClickUninstall(install)}
+                  className="btn btn-success text-white"
+                >
                   Uninstall
                 </button>
               </div>

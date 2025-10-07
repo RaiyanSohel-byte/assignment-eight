@@ -17,4 +17,12 @@ const addToLocalStorage = (appsData) => {
     localStorage.setItem("appList", data);
   }
 };
-export { addToLocalStorage, getStoredApp };
+const removeFromLocalStorage = (appsData) => {
+  const storedAppData = getStoredApp();
+
+  storedAppData.pop(appsData);
+  console.log(storedAppData);
+  const data = JSON.stringify(storedAppData);
+  localStorage.setItem("appList", data);
+};
+export { addToLocalStorage, getStoredApp, removeFromLocalStorage };
