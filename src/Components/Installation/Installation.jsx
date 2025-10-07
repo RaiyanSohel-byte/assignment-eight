@@ -8,11 +8,26 @@ import { HandleUninstallContext } from "../../Root";
 
 const Installation = () => {
   const [installs, setInstalls] = useState(getStoredApp());
+  const [sort, setSort] = useState("Sort By Downloads");
   const handleUninstall = useContext(HandleUninstallContext);
-
   const handleClickUninstall = (app) => {
     handleUninstall(app);
     setInstalls((prev) => prev.filter((inst) => inst.id !== app.id));
+  };
+  const handleSort = (type) => {
+    setSort(type);
+    if (type === "High-Low") {
+      const sortedHighLow = [...installs].sort(
+        (a, b) => b.downloads - a.downloads
+      );
+      setInstalls(sortedHighLow);
+    }
+    if (type === "Low-High") {
+      const sortedHighLow = [...installs].sort(
+        (a, b) => a.downloads - b.downloads
+      );
+      setInstalls(sortedHighLow);
+    }
   };
   return (
     <div className="bg-gray-100 pb-20">
@@ -27,23 +42,24 @@ const Installation = () => {
           ({installs.length}) Apps Found
         </h3>
         <div className="flex justify-center lg:justify-start">
-          <div className="dropdown dropdown-center ">
-            <div
+          <div className="dropdown dropdown-center">
+            <label
               tabIndex={0}
               role="button"
-              className="btn btn-outline border-black text-black bg-white m-1"
+              className="btn btn-outline border-gray-300 text-gray-500 bg-white m-1"
             >
-              Sort By Size <FaCaretDown size={28} />
-            </div>
+              {sort} <FaCaretDown size={28} />
+            </label>
+
             <ul
               tabIndex={0}
-              className="dropdown-content w-36 menu bg-base-100 rounded-box z-1  p-2 shadow-sm"
+              className="dropdown-content w-48 menu bg-base-100 rounded-box z-1  p-2 shadow-md"
             >
               <li>
-                <a>Low-High</a>
+                <a onClick={() => handleSort("Low-High")}>Low-High</a>
               </li>
               <li>
-                <a>High-Low</a>
+                <a onClick={() => handleSort("High-Low")}>High-Low</a>
               </li>
             </ul>
           </div>
