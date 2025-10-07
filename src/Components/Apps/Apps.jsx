@@ -63,7 +63,7 @@ const Apps = () => {
           filteredApps.map((app) => <App2 app={app} key={app.id} />)
         ) : (
           <div className="lg:w-[1440px] mx-auto min-h-[200px] flex flex-col items-center">
-            <h3 className="text-center text-6xl font-bold my-6">
+            <h3 className="text-center text-4xl lg:text-6xl font-bold my-9 text-gray-500">
               No Apps Found
             </h3>
             <div className="flex justify-center">

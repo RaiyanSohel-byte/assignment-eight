@@ -1,15 +1,26 @@
-import React, { useContext } from "react";
-import { AppsContext } from "../../Root";
+import React, { useContext, useState } from "react";
+import { AppsContext, HandleInstallContext } from "../../Root";
 import { useParams } from "react-router";
 import downloadIcon from "../../assets/icon-downloads.png";
 import reviewIcon from "../../assets/icon-review.png";
 import ratingIcon from "../../assets/icon-ratings.png";
 import Stats from "./Stats";
+import { getStoredApp } from "../../Utility/addToLocalStorage";
 const AppDetails = () => {
   const apps = useContext(AppsContext);
   const appIdString = useParams();
   const appId = parseInt(appIdString.id);
   const appsDetails = apps.find((app) => app.id === appId);
+
+  const [installs, setInstalls] = useState(getStoredApp());
+  const isInstalled = installs.some((app) => app.id === appsDetails.id);
+  const handleInstall = useContext(HandleInstallContext);
+  const handleClick = () => {
+    if (!isInstalled) {
+      handleInstall(appsDetails);
+      setInstalls((prev) => [...prev, appsDetails]);
+    }
+  };
 
   return (
     <div className="bg-gray-100 py-[80px]">
@@ -62,8 +73,14 @@ const AppDetails = () => {
             </div>
           </div>
           <div className="flex justify-center lg:justify-start">
-            <button className="btn btn-success mt-4 text-white">
-              Install Now ({appsDetails.size} MB)
+            <button
+              onClick={handleClick}
+              disabled={isInstalled}
+              className="btn btn-success mt-4 text-white"
+            >
+              {isInstalled
+                ? "Installed"
+                : `Install Now (${appsDetails.size} MB)`}
             </button>
           </div>
         </div>
