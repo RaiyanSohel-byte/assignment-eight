@@ -68,7 +68,7 @@ const Installation = () => {
       <div className="max-w-[1440px] mx-auto">
         <div className="my-5">
           {installs.map((install) => (
-            <div className="rounded-[4px] bg-white p-4 flex justify-between items-center mb-4">
+            <div className="rounded-[4px] bg-white p-4 md:flex justify-between items-center mb-4">
               <div className="flex gap-4">
                 <div>
                   <img
@@ -92,7 +92,7 @@ const Installation = () => {
                   </div>
                 </div>
               </div>
-              <div>
+              <div className="flex justify-end">
                 <button
                   onClick={() => handleClickUninstall(install)}
                   className="btn btn-success btn-xs lg:btn-md text-white"
