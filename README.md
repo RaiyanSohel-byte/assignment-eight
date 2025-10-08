@@ -42,5 +42,3 @@ HERO.IO is a modern, responsive web application built with **React** that showca
 - **Notifications:** React Toastify
 
 ---
-
-## Project Structure
