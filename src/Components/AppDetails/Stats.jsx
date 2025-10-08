@@ -9,7 +9,13 @@ import {
 } from "recharts";
 
 const Stats = ({ appsDetails }) => {
-  const data = appsDetails?.ratings || [];
+  let data = [];
+
+  if (appsDetails && appsDetails.ratings) {
+    data = appsDetails.ratings;
+  }
+
+  data = data.slice().reverse();
 
   return (
     <div className="my-8">
