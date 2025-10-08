@@ -19,20 +19,21 @@ const router = createBrowserRouter([
       {
         index: true,
         Component: Home,
-        loader: () => fetch("/data2.json"),
+        loader: () => fetch("/data.json"),
       },
       {
         path: "apps",
         Component: Apps,
       },
       {
+        path: "apps/:id",
+        Component: AppDetails,
+      },
+      {
         path: "installation",
         Component: Installation,
       },
-      {
-        path: ":id",
-        Component: AppDetails,
-      },
+
       {
         path: "*",
         Component: Error404,

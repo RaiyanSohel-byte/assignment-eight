@@ -7,6 +7,7 @@ import {
   removeFromLocalStorage,
 } from "./Utility/addToLocalStorage";
 import Loader from "./Components/Loader/Loader";
+import { toast, ToastContainer } from "react-toastify";
 export const AppsContext = createContext([]);
 export const HandleInstallContext = createContext(() => {});
 export const HandleUninstallContext = createContext(() => {});
@@ -15,9 +16,11 @@ const Root = () => {
 
   const handleInstall = (data) => {
     addToLocalStorage(data);
+    toast.success(`${data.title} installed successfully!`);
   };
   const handleUninstall = (data) => {
     removeFromLocalStorage(data);
+    toast.error(`${data.title} uninstalled!`);
   };
 
   const location = useLocation();
@@ -43,6 +46,7 @@ const Root = () => {
       </HandleUninstallContext>
 
       <Footer />
+      <ToastContainer />
     </div>
   );
 };

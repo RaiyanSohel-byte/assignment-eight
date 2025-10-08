@@ -6,7 +6,7 @@ import { NavLink } from "react-router";
 const App2 = ({ app }) => {
   return (
     <NavLink
-      to={`/${app.id}`}
+      to={`/apps/${app.id}`}
       className="card hover:shadow-xl cursor-pointer transition-all duration-300 bg-base-100 w-[348px] h-[435px] mx-auto shadow-sm p-4"
     >
       <div>
