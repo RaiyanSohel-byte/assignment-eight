@@ -32,18 +32,23 @@ const Root = () => {
     return () => clearTimeout(timeout);
   }, [location]);
 
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <div>
       <Header />
 
-      <HandleUninstallContext value={handleUninstall}>
-        <HandleInstallContext value={handleInstall}>
-          <AppsContext value={apps}>
+      <HandleUninstallContext.Provider value={handleUninstall}>
+        <HandleInstallContext.Provider value={handleInstall}>
+          <AppsContext.Provider value={apps}>
             {isNavigating && <Loader />}
             <Outlet />
-          </AppsContext>
-        </HandleInstallContext>
-      </HandleUninstallContext>
+          </AppsContext.Provider>
+        </HandleInstallContext.Provider>
+      </HandleUninstallContext.Provider>
 
       <Footer />
       <ToastContainer />
