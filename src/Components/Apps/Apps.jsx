@@ -74,7 +74,7 @@ const Apps = () => {
             <img className="w-[40px] h-[40px] animate-spin" src={logo} alt="" />{" "}
           </div>
         ) : filteredApps.length > 0 ? (
-          <div className="grid grid-cols-1 lg:grid-cols-4 max-w-[1440px] mt-5 mx-auto gap-4 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-[1440px] mt-5 mx-auto gap-4 ">
             {!isSearching &&
               filteredApps.map((app) => <App2 app={app} key={app.id} />)}
           </div>
