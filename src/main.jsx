@@ -8,6 +8,7 @@ import Home from "./Components/Home/Home.jsx";
 import Apps from "./Components/Apps/Apps.jsx";
 import Installation from "./Components/Installation/Installation.jsx";
 import AppDetails from "./Components/AppDetails/AppDetails.jsx";
+import Error404 from "./Components/Error404/Error404.jsx";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: ":id",
         Component: AppDetails,
+      },
+      {
+        path: "*",
+        Component: Error404,
       },
     ],
   },

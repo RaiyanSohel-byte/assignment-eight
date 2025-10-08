@@ -1,20 +1,49 @@
 import React, { useContext, useState } from "react";
 import { AppsContext, HandleInstallContext } from "../../Root";
-import { useParams } from "react-router";
+import { NavLink, useNavigate, useParams } from "react-router";
 import downloadIcon from "../../assets/icon-downloads.png";
 import reviewIcon from "../../assets/icon-review.png";
 import ratingIcon from "../../assets/icon-ratings.png";
 import Stats from "./Stats";
 import { getStoredApp } from "../../Utility/addToLocalStorage";
+import errorImg from "../../assets/app-error.png";
+
 const AppDetails = () => {
   const apps = useContext(AppsContext);
   const appIdString = useParams();
   const appId = parseInt(appIdString.id);
   const appsDetails = apps.find((app) => app.id === appId);
-
   const [installs, setInstalls] = useState(getStoredApp());
-  const isInstalled = installs.some((app) => app.id === appsDetails.id);
   const handleInstall = useContext(HandleInstallContext);
+  const navigate = useNavigate();
+
+  if (!appsDetails) {
+    return (
+      <div className="lg:w-[1440px] mx-auto min-h-[200px] flex flex-col items-center my-20">
+        <div>
+          <img src={errorImg} alt="" />
+        </div>
+        <h3 className="text-center text-4xl lg:text-6xl font-bold mt-9 text-[#332a51]">
+          OPPS!! APP NOT FOUND
+        </h3>
+        <p className="text-center  my-9 text-gray-500">
+          The App you are requesting is not found on our system. please try
+          another apps
+        </p>
+        <div className="flex justify-center">
+          <button
+            onClick={() => navigate("/apps")}
+            className="btn [background:linear-gradient(125.07deg,#632EE3,#9F62F2_100%)] text-white"
+          >
+            Show All Apps
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  const isInstalled = installs.some((app) => app.id === appsDetails.id);
+
   const handleClick = () => {
     if (!isInstalled) {
       handleInstall(appsDetails);
