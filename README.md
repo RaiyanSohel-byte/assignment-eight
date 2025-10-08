@@ -1,16 +1,46 @@
-# React + Vite
+# HERO.IO - Productivity Apps Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Hero.io Logo](./src/assets/logo.png)
 
-Currently, two official plugins are available:
+HERO.IO is a modern, responsive web application built with **React** that showcases a suite of productivity applications. It allows users to explore, install, and manage apps with an intuitive interface, while providing insights such as downloads, ratings, and reviews. The project is designed to deliver a seamless experience for both desktop and mobile users.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Table of Contents
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- **Home Page:** Highlights trending apps and provides an overview of HERO.IO.
+- **Apps Listing:** View all available apps with search functionality.
+- **App Details:** Detailed view of each app including downloads, ratings, reviews, and size.
+- **Installation Management:** Install/uninstall apps and sort installed apps by downloads.
+- **Persistent Storage:** Installed apps are stored in `localStorage`.
+- **Responsive Design:** Fully responsive for desktop and mobile devices.
+- **Navigation:** Dynamic routing using `react-router` with error handling for invalid routes.
+- **Notifications:** Success and error notifications using `react-toastify`.
+
+---
+
+## Tech Stack
+
+- **Frontend:** React, React Router, JSX
+- **State Management:** React Context API
+- **Styling:** Tailwind CSS
+- **Charts:** Recharts for app statistics visualization
+- **Icons:** Lucide React & React Icons
+- **Notifications:** React Toastify
+
+---
+
+## Project Structure
