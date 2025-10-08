@@ -1,6 +1,6 @@
 # HERO.IO - Productivity Apps Platform
 
-![Hero.io Logo](./src/assets/logo.png)
+<img src="./src/assets/logo.png" alt="Hero.io Logo" width="150" />
 
 HERO.IO is a modern, responsive web application built with **React** that showcases a suite of productivity applications. It allows users to explore, install, and manage apps with an intuitive interface, while providing insights such as downloads, ratings, and reviews. The project is designed to deliver a seamless experience for both desktop and mobile users.
 
