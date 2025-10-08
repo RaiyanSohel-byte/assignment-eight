@@ -95,7 +95,7 @@ const Installation = () => {
               <div>
                 <button
                   onClick={() => handleClickUninstall(install)}
-                  className="btn btn-success text-white"
+                  className="btn btn-success btn-xs lg:btn-md text-white"
                 >
                   Uninstall
                 </button>
