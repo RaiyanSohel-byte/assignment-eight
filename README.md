@@ -6,7 +6,7 @@ HERO.IO is a modern, responsive web application built with **React** that showca
 
 ## 🌐 Live Demo
 
-Check the live application here: [Assignment Eight Live](https://zesty-fenglisu-4fd1a2.netlify.app/)
+Check the live application here: [HERO.IO Live](https://zesty-fenglisu-4fd1a2.netlify.app/)
 
 ---
 
