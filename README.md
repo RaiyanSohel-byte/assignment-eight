@@ -14,12 +14,7 @@ Check the live application here: [HERO.IO Live](https://zesty-fenglisu-4fd1a2.ne
 
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
@@ -44,5 +39,18 @@ Check the live application here: [HERO.IO Live](https://zesty-fenglisu-4fd1a2.ne
 - **Charts:** Recharts for app statistics visualization
 - **Icons:** Lucide React & React Icons
 - **Notifications:** React Toastify
+
+## Installation
+
+```bash
+   git clone https://github.com/RaiyanSohel-byte/assignment-eight.git
+
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
 
 ---
