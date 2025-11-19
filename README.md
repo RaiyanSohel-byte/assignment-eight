@@ -4,6 +4,10 @@
 
 HERO.IO is a modern, responsive web application built with **React** that showcases a suite of productivity applications. It allows users to explore, install, and manage apps with an intuitive interface, while providing insights such as downloads, ratings, and reviews. The project is designed to deliver a seamless experience for both desktop and mobile users.
 
+## 🌐 Live Demo
+
+Check the live application here: [Assignment Eight Live](https://zesty-fenglisu-4fd1a2.netlify.app/)
+
 ---
 
 ## Table of Contents
